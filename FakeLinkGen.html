@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Discord Link Generator</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: white;
+            border: 5px solid #888;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #555;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .generate-button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .output-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+
+    <!-- Include Roboto font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+</head>
+<body>
+
+    <div class="title">Fake Discord Link Generator</div>
+
+    <input class="input-box" type="text" placeholder="Enter Redirect URL (with https):" id="redirectUrlInput">
+    <input class="input-box" type="text" placeholder="Enter Fake Link (without https):" id="fakeLinkInput">
+
+    <button class="generate-button" onclick="generateFakeLink()">Generate Fake Link ➤</button>
+
+    <div class="output-text" id="outputText"></div>
+
+    <script>
+        function generateFakeLink() {
+            const redirectUrlInput = document.getElementById('redirectUrlInput');
+            const fakeLinkInput = document.getElementById('fakeLinkInput');
+            const outputText = document.getElementById('outputText');
+
+            const redirectUrl = redirectUrlInput.value.trim();
+            const customText = fakeLinkInput.value.trim();
+
+            if (redirectUrl !== '' && customText !== '') {
+                const formattedText = `[${customText}](${redirectUrl})`;
+                outputText.textContent = `Fake Link (send in Discord): ${formattedText}`;
+            } else {
+                outputText.textContent = 'Please enter both Redirect URL and Fake Link.';
+            }
+        }
+    </script>
+
+</body>
+</html>

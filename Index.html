@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabibiDox</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0; /* Reset default margin */
+        }
+
+        body {
+            background-color: white;
+            border: 5px solid #888; /* 5px grey border */
+            box-sizing: border-box; /* Include padding and border in total width/height */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align content at the top */
+            align-items: center;
+            padding-top: 20px; /* Adjusted padding for spacing at the top */
+        }
+
+        .title {
+            font-size: 36px; /* Increased font size */
+            font-weight: bold; /* Set font weight to bold */
+            color: black;
+            font-family: 'Roboto', sans-serif; /* Use Roboto font or replace with your preferred font */
+            margin-bottom: 20px; /* Add some spacing below the title */
+        }
+
+        .input-box {
+            width: 300px; /* Set the width of the input box */
+            padding: 10px; /* Add some padding for better appearance */
+            font-size: 16px;
+            border: 2px solid #555; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 20px; /* Increased spacing below the input box */
+            margin-top: 60px; /* Added margin to move it lower on the page */
+        }
+
+        .submit-box {
+            display: none; /* Initially hide the submit box */
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Include Roboto font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+</head>
+<body>
+
+    <div class="title">Imam Habibi Dox Tools!</div>
+
+    <input class="input-box" type="text" placeholder="Key Needed To Enter Portal:" oninput="showSubmitBox()">
+
+    <button class="submit-box" onclick="submitForm()">Submit Key ➤</button>
+
+    <script>
+        function showSubmitBox() {
+            var inputBox = document.querySelector('.input-box');
+            var submitBox = document.querySelector('.submit-box');
+
+            if (inputBox.value.trim() !== '') {
+                submitBox.style.display = 'block';
+            } else {
+                submitBox.style.display = 'none';
+            }
+        }
+
+        function submitForm() {
+            var inputBox = document.querySelector('.input-box');
+            var enteredKey = inputBox.value.trim();
+
+            // List of valid keys
+            var validKeys = [
+                "AdminKey20232023",
+                "S5W5-7BGZ-VGDL-YVSP",
+                "JZWF-ZF56-3Y4T-RHSE",
+                "ZR6A-VQK4-EEQD-H93D"
+              
+            ];
+
+            // Check if entered key is valid
+            if (validKeys.includes(enteredKey)) {
+                // Redirect to another page
+                window.location.href = "Portal08129113.html";
+            } else {
+                alert('Invalid key 💀');
+            }
+        }
+    </script>
+
+</body>
+</html>

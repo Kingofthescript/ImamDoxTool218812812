@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entered Portal</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: white;
+            border: 5px solid #888;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #888;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Include Roboto font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+</head>
+<body>
+
+    <div class="title">You Have Entered The Dox Portal!</div>
+
+    <div class="subtitle">Dox Tools Below ↓</div>
+
+    <button class="button" onclick="redirectToFakeLinkGenerator()">Fake Discord Link Gen</button>
+
+    <script>
+        function redirectToFakeLinkGenerator() {
+            // Redirect to the Fake Link Generator page
+            window.location.href = "FakeLinkGen.html";
+        }
+    </script>
+
+</body>
+</html>
